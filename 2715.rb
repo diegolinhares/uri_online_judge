@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# INCOMPLETE
+# INCOMPLETE`
 while (n = gets.to_i)
   next unless n >= 1 && n <= 10**6
 
