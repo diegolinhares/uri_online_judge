@@ -3,16 +3,12 @@
 cases = gets.to_i
 rpms = gets.split.map(&:to_i)
 
-a = rpms.first
 position = 0
 
-(1..rpms.size - 1).each do |i|
-  if a > rpms[i]
-    position = i + 1
-    break
-  end
+inflection_element = rpms.each_cons(2).find { |x, y| x > y }
 
-  a = rpms[i]
+unless inflection_element.nil?
+  position = rpms.index(inflection_element.last) + 1
 end
 
 puts position
